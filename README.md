@@ -1,83 +1,105 @@
+# From Orders to Outcomes: A Supply Chain Optimization Journey
 
-
-## 📦 From Orders to Outcomes — A Beginner’s Dive into Supply Chain Analytics
-
-**Author:** Sesha Sai Ramineni
-**Tools Used:** Python, Pandas, Seaborn, Jupyter Notebook, Power BI, Excel
-**Domain:** Supply Chain Analytics | Business Intelligence | Data Visualization
+**Author**: Sesha Sai Ramineni
+**Tools Used**: Python (Pandas, Matplotlib, Seaborn), Jupyter Notebook
 
 ---
 
-### 📌 Overview
+## 🚀 Overview
 
-This project explores **30,000+ supply chain transactions** over a 3-year span to identify inefficiencies, analyze customer behavior, and derive actionable business insights.
-
-Through data cleaning, exploratory analysis, and dashboard design, this project showcases how even messy datasets can be transformed into strategies that uncover **\$2.3M+ in efficiency improvements**.
+This project involved analyzing 30,871 supply chain transactions from 2015–2017 to uncover inefficiencies, customer patterns, and regional performance gaps. As a first-time analyst, my goal was to transform raw data into actionable insights that could guide smarter operational decisions. Through detailed analysis, I discovered over \$2.3 million in potential efficiency gains.
 
 ---
 
-### 🧩 Datasets Used
+## 📦 Datasets Used
 
-* `Orders & Shipments.csv` – Order details and shipping timelines
-* `Inventory.csv` – Monthly product stock logs
-* `Fulfillment.csv` – Fulfillment channel and shipping class data
+### 1. Orders & Shipments (30,871 records)
 
----
+* Order details (quantity, product, customer, time)
+* Gross sales, profit, discount
+* Shipping info (scheduled vs. actual date, mode, country)
 
-### 📈 Key Metrics & Insights
+### 2. Inventory (4,200 records)
 
-* **Net Sales** and **Profit Margin** calculated per order
-* Identified **chronic stockouts** (e.g., webcams missing for 23/36 months)
-* Highlighted **shipping delays** in Standard and Second-Class fulfillment
-* Discovered **peak order times** (Fridays, 2–4 PM) for targeted marketing
-* Segmented customers to identify high-value repeat buyers
+* Product name and month-year
+* Stock levels and cost per unit
 
----
+### 3. Fulfillment (118 records)
 
-### 📊 Visuals & Dashboard
-
-A fully interactive **Power BI dashboard** was built to visualize:
-
-* Monthly sales trends & drops
-* Region-wise profit contributions
-* Inventory heatmaps
-* Shipping delay distributions
-* Customer segmentation
-
+* Product-wise average fulfillment time
 
 ---
 
-### 💡 Business Recommendations
+## 🪑 Step 1: Data Cleaning & Metrics
 
-* Improve fulfillment speed for top-selling items
-* Use surge pricing during peak hours
-* Fix recurring stockout problems with better forecasting
-* Reconsider economy shipping options
-* Launch loyalty rewards for high-value customers
+**Challenges Faced:**
 
----
+* Inconsistent column names
+* Fragmented date fields
+* Invalid discount entries
 
-### 🚀 Getting Started
+**Key Fixes & Features:**
 
-Clone this repo and run the included Jupyter notebook to reproduce the analysis.
+* Unified dates using Pandas
+* Handled missing/invalid discounts
+* Computed new financial metrics:
 
-```bash
-git clone https://github.com/your-username/from-orders-to-outcomes.git
-cd from-orders-to-outcomes
-jupyter notebook
-```
+  * `Net Sales = Gross Sales * (1 - Discount%)`
+  * `Profit Margin = Profit / Net Sales`
 
 ---
 
-### 📁 Files
+## 📊 Step 2: Sales and Profit Trends
 
-* `BA200 Final Project.ipynb` – Main analysis notebook
-* `data/` – Cleaned datasets
+* Sales trends revealed growth from 2015 to mid-2017, followed by a sudden drop
+* Regional profit breakdown showed strong performance in Central America and Western Europe
 
 ---
 
-### 🧠 Lessons Learned
+## 🚚 Step 3: Shipping & Fulfillment Analysis
 
-* Real-world data is messy—but fixable
-* Visual storytelling can uncover million-dollar insights
-* Combining code and business logic creates impactful results
+* \~9% of orders had shipping delays >7 days, mostly from Standard and Second Class
+* Fulfillment delays found even among top-selling products
+
+---
+
+## 🏢 Step 4: Inventory and Product Insights
+
+* *Perfect Fitness Rip Deck* was a best-seller with 3x average sales
+* *Web Cameras* were out of stock for 23 of 36 months
+* Inventory heatmaps revealed seasonal stock planning and supply gaps
+
+---
+
+## 🤝 Step 5: Customer Behavior
+
+* Top customer generated over \$4,000 in net sales
+* Peak order times: Fridays between 2–4 PM
+* Repeat buyers made up \~30% of total customers
+
+---
+
+## 💲 Step 6: Financial Patterns
+
+* Discounts >25% reduced profit margins by over 34%
+* Weak correlation (r ≈ 0.12) between inventory cost and actual profit
+
+---
+
+## 💡 Key Business Recommendations
+
+1. Accelerate fulfillment for high-demand products
+2. Use surge pricing during peak seasons
+3. Resolve chronic stockouts via better forecasting
+4. Reward high-value customers through VIP programs
+5. Improve economy shipping services
+
+---
+
+## 🔬 Final Thoughts
+
+This project taught me that the real value of data lies in context and clarity. I learned how to take disorganized datasets and build a story from them — one that points to measurable operational improvements. As a beginner, the most rewarding takeaway was realizing how far curiosity and a few lines of Python could go.
+
+---
+
+Thanks for reading!
